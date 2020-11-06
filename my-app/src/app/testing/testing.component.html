@@ -1,0 +1,117 @@
+<!-- 
+<form [formGroup]="noteSheetForm">
+  <div class="row">
+    <div class="col-md-6">
+      <h5 class="headingValue" *ngIf="showbtn">Endorsee </h5>
+    </div>
+    <div class="col-md-6 text-right">
+      <button class="btn btn-success btn-sm" *ngIf="showbtn" (click)="addEndorseAddress('EndorseeAddress',0)"><i
+          class="fas fa-plus-circle"></i> Add
+        Endorsee </button>
+    </div>
+  </div>
+  <div formArrayName="endorseAddress"
+    *ngFor="let endorse of noteSheetForm.get('endorseAddress')['controls']; let i = index">
+    <div class="row" [formGroupName]="i">
+      <div class="col-md-3 mb-2">
+        <h5>Endorsee :{{i+1}} </h5>
+      </div>
+      <div class="row" style="padding-left: 15px;padding-right: 15px;">
+
+
+        <div class="col-md-3 form-group">
+          <label>Endorsee Name <span class="errorColor">*</span></label>
+          <input type="text" class="form-control" placeholder="Endorsee Name" formControlName="endorseeName">
+          <div *ngIf="endorse.get('endorseeName').hasError('required')&&endorse.get('endorseeName').touched"
+            class="failed-validation" class="errorColor">
+            Endorsee Name Required
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="col-md-3 form-group">
+          <label>Address Line 2</label>
+          <input type="text" class="form-control" placeholder="Address Line 2" formControlName="endorseeAddressLine2">
+        </div>
+
+
+
+        <div class="col-md-3 form-group">
+          <label>Remark</label>
+          <input type="text" class="form-control" placeholder="Remark" formControlName="endorseeRemark">
+        </div>
+  
+        <div class="col-md-6 text-right" style="margin-top:2em;">
+          <button class="btn btn-success btn-sm" (click)="addEndorseAddress('EndorseeAddress',i+1)"><i
+              class="fas fa-plus-circle"></i> Add Endorsee</button>&nbsp;
+          <button class="btn btn-secondary btn-sm" (click)="removeRow(i,'Endorsee')"><i class="fas fa-minus-circle"></i>
+            Remove Endorsee
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>
+
+
+ -->
+
+
+<!-- 
+
+<div class="container">
+  <h4>Checkout</h4>
+  <form [formGroup]="checkoutForm" (ngSubmit)="postData()">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" formControlName="emailAddr">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Quantity</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" formControlName="quantity">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1" formControlName="terms">
+          <label class="form-check-label" for="gridCheck1">
+            Agree To terms
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" [disabled]="!checkoutForm.valid">Check out</button>
+        <button type="submit" class="btn btn-link" (click)="resetForm()">Clear</button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Items</label>
+      <div class="col-sm-10" formArray="items">
+        <div *ngFor="let items of checkoutForm.items['controls']; let i=index" [formGroupName]="i">
+          <input class="form-control" type="text" formControlName="itemId" id=task{{i}}>
+          <input class="form-control" type="text" formControlName="itemName" id=task{{i}}>
+          <input class="form-control" type="text" formControlName="itemDesc" id=task{{i}}>
+          <input class="form-control" type="checkbox" formControlName="itemDone"> Mark as Done
+        </div>
+      </div>
+    </div>
+
+
+  </form>
+
+</div> -->
