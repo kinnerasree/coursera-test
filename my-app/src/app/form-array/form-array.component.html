@@ -1,0 +1,165 @@
+<!-- <mat-tab  -->
+<!-- label="Express Entry"> -->
+    <ng-template matTabContent>
+      <br>
+      <form [formGroup]="timesheetLog">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="headingValue">Express Entry</h2>
+          </div>
+          <!-- <div class="col-xs-6 col-6 col-md-4 form-group">
+            <input type="text" class="form-control" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker"
+              bsDatepicker [bsConfig]="{dateInputFormat: 'YYYY-MM-DD' }">
+          </div> -->
+
+          <div class="col-sm-4 ">
+            <input type="text" class="form-control calendar" #drp="bsDaterangepicker" bsDaterangepicker
+              placeholder="Select Date Range" formControlName="daterange" [bsConfig]="{dateInputFormat: 'YYYY-MM-DD' }">
+          </div>
+
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary" (click)="selectMyTimeSheet()">submit</button>&nbsp;
+            <!-- <button type="button" class="btn btn-primary"
+              (click)="resetMyTimeSheet()">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary " data-toggle="dropdown"
+              (click)="downloadTimesheet()">Download</button> -->
+          </div>
+        </div>
+        <hr>
+
+        <!-- HEader -->
+        <div class="row">
+          <div class="col-md-2">
+            <h2>Type</h2>
+          </div>
+          <div class="col-md-2">
+            <h2>Start Time</h2>
+          </div>
+          <div class="col-md-2">
+            <h2>End Time</h2>
+          </div>
+          <div class="col-md-2">
+            <h2>Level</h2>
+          </div>
+          <div class="col-md-4">
+            <h2>Remarks</h2>
+          </div>
+
+        </div>
+        <hr>
+
+        <div>
+          <form [formGroup]="myForm">
+            <div formArrayName="workLog">
+              <div *ngFor="let work of myForm.get('workLog').controls; let i=index">
+                <fieldset>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h3>{{returnDay(work.get('startDate').value?.getDay())}}</h3>
+                    </div>
+                    <div class="col-md-3">
+                      <h3>{{ work.get('startDate').value?.toLocaleDateString() }}</h3>
+                    </div>
+                    <div class="col-md-3">
+                      <h3>Work:</h3>
+                    </div>
+                    <div class="col-md-3">
+                      <h3>Non-Work:</h3>
+                    </div>
+
+                  </div>
+                  <!-- <legend><h3>{{ work.get('startDate').value?.toLocaleDateString() }}</h3></legend> -->
+                  <div [formGroupName]="i">
+                    <div formArrayName="timesheet">
+                      <div *ngFor="let project of work.get('timesheet').controls; let j=index">
+                        <fieldset>
+                          <div [formGroupName]="j">
+
+                            <div class="row">
+                              <div class="col-md-2 prutech-form-control">
+                                <select class="form-control" formControlName="work" placeholder="Work">
+
+                                  <option value="0" disabled>Select Type</option>
+                                  <option> Work</option>
+                                  <option> OT</option>
+                                  <option> Sick</option>
+                                  <option> Vacation</option>
+                                </select>
+                              </div>
+                              <!-- <div class="default-time-example">
+                                <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'"
+                                  readonly>
+                                <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+                              </div> -->
+
+                              <div class="col-md-2 prutech-form-control">
+                                <input type="time" name="time" class="form-control" formControlName="startTime" />
+                              </div>
+
+                              <div class="col-md-2 prutech-form-control">
+                                <input type="time" name="time" class="form-control" formControlName="endTime" />
+                              </div>
+
+
+                              <div class="col-md-2 prutech-form-control">
+                                <select class="form-control" formControlName="project">
+                                  <option value="0" disabled>Project</option>
+                                  <option value=1> Project 1 </option>
+                                  <option value="2">Project 2</option>
+                                </select>
+                              </div>
+
+                              <div class="col-md-4 prutech-form-control">
+                                <input type="text" class="form-control" placeholder="Remarks"
+                                  formControlName="remarks" />
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+
+                      <span class="material-icons" (click)="addNewProject(work.controls.timesheet)"
+                        style="cursor: pointer;">
+                        add
+                      </span>
+                      <span class="material-icons" (click)="deleteProject(work.controls.timesheet, j)"
+                        style="cursor: pointer;">
+                        delete
+                      </span>
+
+                      <hr>
+
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+            </div><br>
+
+          </form>
+
+          <pre>{{myForm.value | json}}</pre>
+        </div>
+
+
+        <!-- <div class="row">
+          <div class="col-md-12 text-right">
+            <button class="btn btn-secondary" (click)="clear()">Reset</button>&nbsp;
+            <button class="btn btn-info">Save</button>&nbsp;
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </div> -->
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" [disabled]="!myForm.valid"
+            (click)="save()"> Submit And Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cancel</button>
+        </div>
+
+
+      </form>
+
+    </ng-template>
+  <!-- </mat-tab> -->
