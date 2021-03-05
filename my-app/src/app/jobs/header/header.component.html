@@ -1,0 +1,54 @@
+
+<header id="header" class="header header-hide">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" id="navbar-expand-lg">
+      <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="../../assets/images/logo.png" alt="" title="" class="img-responsive logoimg">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto ">
+                  <li class="nav-item ">
+                      <a class="nav-link" routerLink="/Home" (click)="menuactive('home')"
+                          [ngClass]="(menudata === 'home')?'menuactive':'nav-link' "><span
+                              class="menutitle">Home</span>
+
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"  (click)="menuactive('jobseeker')"
+                          [ngClass]="(menudata === 'jobseeker')?'menuactive':'nav-link' "><span class="menutitle">Job
+                              Seeker</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"  (click)="menuactive('mentor')"
+                          [ngClass]="(menudata === 'mentor')?'menuactive':'nav-link' "><span
+                              class="menutitle">Mentor</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"  (click)="menuactive('training')"
+                          [ngClass]="(menudata === 'training')?'menuactive':'nav-link' "><span
+                              class="menutitle">Training</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Jobs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+
+                  <!-- <li class="nav-item">
+                          <a class="nav-link menuactive" href="#">Signup</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link normalactive" href="#">Login</a>
+                      </li> -->
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header><!-- #header -->

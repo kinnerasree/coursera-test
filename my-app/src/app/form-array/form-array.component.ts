@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+// import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { CreateTimesheetInput } from './mytimesheet.model';
 import { TimeManagementService } from './time-management.service';
 
@@ -14,7 +14,7 @@ export class FormArrayComponent implements OnInit {
   myForm: FormGroup;
   i: FormGroup;
   j: FormGroup;
-  datePickerConfg: Partial<BsDatepickerConfig>;
+  // datePickerConfg: Partial<BsDatepickerConfig>;
   lastday: string;
   firstday: string;
   selectedDates: Date[] = [];

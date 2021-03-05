@@ -1,0 +1,14 @@
+{
+    "SIGNUP":
+    {
+        "FIRSTNAME":"Prénom",
+        "LASTNAME":"Nom de famille",
+        "MAILID":" Adresse électronique",
+        "PHONE":"Numéro de portable",
+        "TITLEHEADING":"Inscription gratuite",
+        "SUBTITLE":"Déjà enregistré?",
+        "HERE":"ici",
+        "NEXTBUTTON":"Prochain",
+        "LOGIN":"S'IDENTIFIER"
+    }
+}

@@ -16,12 +16,22 @@ import { MatInputModule } from '@angular/material/input';
 // import { MatCardModule } from '@angular/material/card';
 // import { MatSidenavModule, MatTabsModule, MatButtonModule, MatIconModule, MatTooltipModule, MatCard, MatCardModule, MatNativeDateModule, MatFormFieldModule, MatInputModule, MatDividerModule,
 //    MatDatepickerModule, MatRippleModule } from '@angular/material';
-import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-import { TestingComponent } from './testing/testing.component';
+// import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { FormArrayComponent } from './form-array/form-array.component';
 import { NewComponent } from './new/new.component';
-import { HttpClientModule } from '@angular/common/http';
-import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { HttpClient, HttpClientModule, } from '@angular/common/http';
+// import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { ProductsComponent } from './new/products/products.component';
+import { ConvertToSpacesPipe } from './new/shared/convert-to-spaces.pipe';
+import { StarComponent } from './new/shared/star/star.component';
+import { ProductService } from './new/products/product.service';
+import { TaskformComponent } from './taskform/taskform.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { LoginComponent } from './jobs/login/login.component';
+import { HeaderComponent } from './jobs/header/header.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DecodeComponent } from './decode/decode.component';
 
 // import {
 //   NgxMatDatetimePickerModule,
@@ -36,16 +46,24 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 @NgModule({
   declarations: [
     AppComponent,
-    TestingComponent,
+    
     FormArrayComponent,
     NewComponent,
+    ProductsComponent,
+    ConvertToSpacesPipe,
+    StarComponent,
+    TaskformComponent,
+    JobsComponent,
+    LoginComponent,
+    HeaderComponent,
+    DecodeComponent
 
   ],
   imports: [
-    BsDatepickerModule.forRoot(),
+    // BsDatepickerModule.forRoot(),
 
     HttpClientModule,
-    NgxMaterialTimepickerModule,
+    // NgxMaterialTimepickerModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -65,14 +83,22 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     // NgxMatTimepickerModule,
     // NgxMatNativeDateModule
 
-
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http, './assets/i18n', '.json');
+        },
+        deps: [HttpClient]
+      },
+    })
 
 
 
 
 
   ],
-  providers: [],
+  providers:[ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
