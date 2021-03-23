@@ -1,0 +1,143 @@
+{
+    "SIGNUP": {
+        "FIRSTNAME": "First Name",
+        "LASTNAME": "Last Name",
+        "MAILID": "Email Address",
+        "PHONE": "Mobile Number",
+        "JOBSEEKERTITLEHEADING": "Job Seeker Pre Registration",
+        "MENTORTITLEHEADING": "Mentor Pre Registration",
+        "TRAININGTITLEHEADING": "Training  Pre Registration",
+        "SUBTITLE": "Already Registered?",
+        "HERE": "here",
+        "SIGNUPOTPHEADING": "OTP Verification",
+        "CREATEPASSWORD": "Create Password",
+        "SIGNUPOTPTEXT": "Enter the OTP sent to",
+        "OTPFORMTEXTLABEL": "OTP Number",
+        "WARNINGMESSAGEFOROTP": "Don't Receive OTP?",
+        "RESENDOTP": "RESEND OTP",
+        "VERIFYBUTTON": "Verify & Proceed",
+        "Congratulations": "Congratulations!",
+        "SUCCESSMESSGE": "your details has been successfully Registered.",
+        "CREATEACCOUNTHEADING": "Create an Account",
+        "PARAGRAPHSENTENCE": "We’re a passionate team that likes hard problems, breaks world records,and strives to make an impact every day",
+        "ALREADYREGISTER": "Already Registered?",
+        "TYPELABEL":"Type",
+        "JOBSEEKER": "Job Seeker",
+        "MENTOR": "Mentor",
+        "TRAINING": "Training",
+        "EMPLOYER": "Employer"
+    },
+    "LOGIN": {
+        "LOGINHEADING": "Login to your account",
+        "LOGINSUBHEADING": "Don’t have an account?",
+        "USERNAMELABEL": "Email ",
+        "PASSWORDLABEL": "Password",
+        "CONFIRMPASSWORDLABEL": "Confirm Password",
+        "REMEMBERME": "Remember me",
+        "FORGOTPASSWORDLINK": "Forgot password?",
+        "REGISTERFORFREE": "Register For Free!"
+    },
+    "COMMON": {
+        "JOBSEEKER": "Job Seeker",
+        "MENTOR": "Mentor",
+        "TRAINING": "Training",
+        "EMPLOYER": "Employer",
+        "BACK": "Back",
+        "LOGIN": "Login",
+        "NEXTBUTTON": "Next",
+        "CANCELBUTTON":"Cancel",
+        "SUBMITBUTTON":"Submit",
+        "FIELDREQUIRED":"Field Required",
+        "ZIPCODEERROR":"Zipcode Invalid",
+        "PASSINGERROR":"Passing Year Invalid"
+    },
+    "ERRORMESSAGING": {
+        "MINLENGTHERROR":"Characters should  be more than 3",
+        "MINLENGTHERROR1":"Characters should  be more than 2",
+        "MAXLENGTHERROR":"Characters should  be less than 75",
+        "MAXLENGTHERROR1":"Characters should  be less than 125",
+        "EMAILERROR":"Email invalid",
+        "INSTITUTENAME":"Please Enter Institute Name",
+        "SPECIALIZATION":"Please Enter Specialization",
+        "PASSINGYEAR":"Please Enter Year Of Passing",
+        "PERCENTAGE":"Please Enter Percentage",
+        "GRADE":"Please Enter Grade",
+        "CGPA":"Please Enter CGPA",
+
+
+
+        "LOGINFORM":
+        {
+            "LOGINEMAILREQUIRED":"Email is required",
+            "LOGINNPASSWORDREQUIRED":"Password is required"
+            
+        },
+       
+        "SIGNUPFORM":
+        {
+            "INVALIDMAILID":"Email is not valid",
+            "PHONELENGTH":"Phone Number is not valid",
+            "USERROLE":"Select user role",
+            "OTPNUMBER":"Enter OTP",
+            "CONFIRMPASSWORD":"Confirm Password is required",
+            "PASSWORDMATCH":" Passwords must match",
+            "COUNTRYCODE":"Field Required"
+        }
+      
+
+    },
+
+    "MENTORLABELS":
+    {
+        "MENTORPERSONALDETAILS":"Personal Details",
+        "PRESENTADDRESS":"Present Address",
+        "PERMENENTADDRESS":"Permanent Address",
+        "MENTORSHIPPROFILE":"MentorShip Profile",
+        "MENTORAVAILABILITY":"Mentor Availability",
+        "EDUCATIONDETAILS":"Education Details",
+        "MIDDLENAME":"Middle Name",
+        "MAILID":"Email Id",
+        "ALTPHONENO":"Alternative Mobile Number",
+        "GENDER":"Gender",
+        "HEADLINE":"Head Lines",
+        "BIOGRAPHY":"Biography",
+        "LINE1":"Line1",
+        "CITY":"City",
+        "STATE":"State",
+        "COUNTRY":"Country",
+        "LANDMARK":"Land Mark",
+        "ZIPCODE":"Zipcode",
+        "EMPLOYMENTHISTORYLABLE":"Employment History",
+        "ROLENAME":"Role Name",
+        "DATEJOIN":"Joined On",
+        "COMPANYNAME":"Company Name",
+        "DOMAINNAME":"Domain Name",
+        "EXPERTISETECH":"Expertise Technology",
+        "NOOFCANDIDATES":"Number Of Candidates Can Handle",
+        "EXPERTISEDOMAIN":"Expertise Domain",
+        "PREFERTEACHINGLAUNG":"Prefer Teaching Launguage",
+        "MENTORTIMINGS":"Mentor Avalilability Timings",
+        "OTHERTOPICS":"Other Topics Intersted In",
+        "PROFESSIONALEXPERIENCE":"Professional Experience",
+        "PREVIOUSMENTORSHIPEXPERIENCE":"Previous Mentor Ship Experience",
+        "BRIEFTEACHINGJOBPLANET":"Brief On Teaching In Jobplanet",
+        "INSTITUTENAME":"Institute Name",
+        "SPECIFICATIONS":"Specifications",
+        "PASSINGYEAR":"Passing Year",
+        "PERCENTAGE":"Percentage %"
+    },
+    
+    "TRAINING":
+    {
+        "FIRSTNAME":"sai"
+    },
+    "CANDIDATE":
+    {
+        "INSTITUTENAME":"Institution Name",
+        "SPECILIZATION":"Specialization",
+        "PASSINGYEAR":"Passing Year",
+        "PERCENTAGE":"Percentage",
+        "GRADE":"Grade",
+        "CGPA":"CGPA"
+    }
+}

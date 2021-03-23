@@ -1,0 +1,164 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <ng-template matStepLabel>Education Details</ng-template>
+    <mat-step [stepControl]="educationForm">
+        <!-- Education -->
+        <div class="col-lg-12">
+            <form [formGroup]="educationForm">
+                <div formArrayName="educationalArray">
+                    <div *ngFor="let education of educationalArray().controls; let i=index" [formGroupName]="i">
+                        <div class="card  mt-3">
+                            <div class="card-header">
+                                <label class="m-0"><strong>Education Details #{{i + 1}}</strong></label>
+                            </div>
+                            <div class="card-body">
+                                <div class="row d-flex align-items-start">
+                                    <!-- Highest Degree -->
+                                    <div class="col-lg-4 prutech-form-control">
+                                        <label>Highest Degree <span class="mandatory">*</span></label>
+                                        <select ngcontent-c3="" class="form-control ng-untouched ng-pristine ng-invalid"
+                                            formControlName="highestDegree" id="highestDegree">
+                                            <option disabledselected value="">Select Highest Degree</option>
+                                            <option *ngFor="let highestDegree of highestDegreeList"
+                                                [value]="highestDegree">
+                                                {{highestDegree}}
+                                            </option>
+                                        </select>
+
+                                    </div>
+                                    <!-- Major/Concentration -->
+                                    <div class="col-lg-4 prutech-form-control">
+                                        <label>Major/Concentration <span class="mandatory">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Major/Concentration"
+                                            formControlName="major">
+
+                                    </div>
+                                    <!-- Number Of Years  -->
+                                    <div class="col-lg-4 prutech-form-control">
+                                        <label>Number Of Years <span class="mandatory">*</span></label>
+                                        <select ngcontent-c3="" class="form-control ng-untouched ng-pristine ng-invalid"
+                                            formControlName="numberOfYears" id="numberOfYears">
+                                            <option disabledselected value="">Select Number Of Years</option>
+                                            <option *ngFor="let numberOfYears of numberOfYearsList"
+                                                [value]="numberOfYears">
+                                                {{numberOfYears}}
+                                            </option>
+                                        </select>
+
+                                    </div>
+
+                                    <!-- Year -->
+                                    <div class="col-lg-4 prutech-form-control">
+                                        <label>Year Of Degree Awarded <span class="mandatory">*</span></label>
+                                        <input type="text" class="form-control" placeholder="YYYY"
+                                            formControlName="yearDegreeReward" maxlength="4" alphaSpaceInput
+                                            inputType="strictlyNumber" max="{{currentYear}}">
+
+                                    </div>
+                                    <!-- Institute Name -->
+                                    <div class="col-lg-4 prutech-form-control">
+                                        <label>Institute Name <span class="mandatory">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Institute Name "
+                                            formControlName="instituteName" alphaSpaceInput inputType="alphaWithSpace"
+                                            maxlength="255">
+
+                                    </div>
+
+                                    <!-- Country -->
+                                    <div class="col-lg-4 prutech-form-control">
+                                        <label>Country Awarded <span class="mandatory">*</span></label>
+                                        <select ngcontent-c3="" class="form-control ng-untouched ng-pristine ng-invalid"
+                                            formControlName="countryAwarded" id="countryAwarded">
+                                            <option disabledselected value="">Select Country Awarded</option>
+                                            <option *ngFor="let country of countryList" [value]="country.country_name">
+                                                {{country.country_name}}
+                                            </option>
+                                        </select>
+
+                                    </div>
+                                    <br>
+                                    <!-- +/Del Btns -->
+                                    <div class="col-lg-12 mt-3">
+                                        <div class="float-right">
+                                            &nbsp;<button (click)="addEducationDetails()"><i class="fa fa-plus"
+                                                    aria-hidden="true"></i>&nbsp;Add&nbsp;</button>&nbsp;
+                                            <button class="delete-button " (click)="removeEducationalDetails(i)"><i
+                                                    class="fa fa-trash-o"
+                                                    aria-hidden="true"></i>&nbsp;Delete&nbsp;</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <br>
+        <div class="d-flex col-lg-12 justify-content-end mt-3 p-3">
+            <button class="submit-button" (click)="addCertications()">Add Certifications</button>&nbsp;
+            <button class="cancel-button"  >Next</button>
+        </div>
+        <!-- Certifications -->
+        <div class="col-lg-12">
+            <form [formGroup]="certificationForm">
+                <div formArrayName="certificationsInfo">
+                    <div *ngFor="">
+                        <div class="card  mt-3">
+                            <div class="card-header">
+                                <label class="m-0">Certifications</label>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row d-flex align-items-start">
+                                <!-- Highest Degree -->
+                                <div class="col-lg-4 prutech-form-control">
+                                    <label>Certification Name <span class="mandatory">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Major/Concentration"
+                                        formControlName="certificationName">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div> -->
+
+    </mat-step>
+    <!-- <mat-step [stepControl]="secondFormGroup" label="Career Interest">
+        <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step> -->
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>

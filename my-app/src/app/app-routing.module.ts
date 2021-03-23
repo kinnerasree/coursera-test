@@ -4,6 +4,8 @@ import { DecodeComponent } from './decode/decode.component';
 import { FormArrayComponent } from './form-array/form-array.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { LoginComponent } from './jobs/login/login.component';
+import { NewloginComponent } from './jobs/newlogin/newlogin.component';
+import { ProfileComponent } from './jobs/profile/profile.component';
 import { NewComponent } from './new/new.component';
 import { ProductsComponent } from './new/products/products.component';
 import { TaskformComponent } from './taskform/taskform.component';
@@ -14,8 +16,11 @@ const routes: Routes = [
   { path: 'product', component: ProductsComponent },
   { path: 'task', component: TaskformComponent },
   { path: 'jobs', component: JobsComponent },
-  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'decode', component:DecodeComponent },
+
+  { path: 'newlogin', component:NewloginComponent},
+  { path: '', component:ProfileComponent},
 
 
 

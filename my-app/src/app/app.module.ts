@@ -32,7 +32,10 @@ import { HeaderComponent } from './jobs/header/header.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DecodeComponent } from './decode/decode.component';
-
+import { NewloginComponent } from './jobs/newlogin/newlogin.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ProfileComponent } from './jobs/profile/profile.component';
+import {MatStepperModule} from '@angular/material/stepper';
 // import {
 //   NgxMatDatetimePickerModule,
 //   NgxMatNativeDateModule,
@@ -56,7 +59,11 @@ import { DecodeComponent } from './decode/decode.component';
     JobsComponent,
     LoginComponent,
     HeaderComponent,
-    DecodeComponent
+    DecodeComponent,
+    NewloginComponent,
+    ProfileComponent,
+    
+
 
   ],
   imports: [
@@ -78,6 +85,9 @@ import { DecodeComponent } from './decode/decode.component';
     MatSliderModule,
     MatNativeDateModule,
     MatInputModule,
+    AngularFontAwesomeModule,
+    MatStepperModule,
+
     // NgxDaterangepickerMd,
     // NgxMatDatetimePickerModule,
     // NgxMatTimepickerModule,

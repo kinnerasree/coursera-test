@@ -32,6 +32,7 @@
     "ag-grid-angular": "^23.2.1",
     "ag-grid-community": "^23.2.1",
     "ag-grid-enterprise": "^23.2.1",
+    "angular-font-awesome": "^3.1.2",
     "angular-material-time-picker": "^1.0.8",
     "angular-ng-autocomplete": "^2.0.1",
     "angular2-notifications": "^2.0.0",
